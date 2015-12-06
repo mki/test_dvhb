@@ -5,7 +5,7 @@
     <title>Блоги</title>
 </head>
 <body>
-
+<a href="{% url 'blog:blog_list' %}">Блоги</a> | <a href="{% url 'blog:blog_feed' %}">Лента</a>
 {% block content %}{% endblock %}
 
 </body>

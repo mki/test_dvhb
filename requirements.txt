@@ -10,3 +10,4 @@ Django==1.9
 ipython
 ipdb
 django-ses
+django-braces

@@ -1,0 +1,9 @@
+<p>
+    {% if prev_page_link %}
+        <a href="{{ prev_page_link }}">Предыдущая страница</a>
+    {% endif %}
+    <span>Страница {{ cur_page }} из {{ total_pages }}</span>
+    {% if next_page_link %}
+        <a href="{{ next_page_link }}">Следующая страница</a>
+    {% endif %}
+</p>

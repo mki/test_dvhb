@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1> {{ blog.name }}</h1> <a href="{% url 'blog:subscribe_view' blog.id %}">{% if is_subscribed %}Отписаться{% else %}Подписаться{% endif %}</a>
+    <hr>
+    {% for post in posts %}
+        <h3><a href="{% url 'blog:post_view' post.id %}">{{ post.title }}</a></h3>
+        <p>{{ post.content }}</p>
+        <p>{{ post.created }}</p>
+        <hr>
+    {% endfor %}
+{% endblock %}
