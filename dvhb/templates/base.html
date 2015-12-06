@@ -5,7 +5,10 @@
     <title>Блоги</title>
 </head>
 <body>
-<a href="{% url 'blog:blog_list' %}">Блоги</a> | <a href="{% url 'blog:blog_feed' %}">Лента</a>
+{% if user.is_authenticated %}<a href="{% url 'blog:post_add' %}">Добавить пост</a>{% else %}<a href="{% url 'blog:blog_login' %}">Войти</a>{% endif %} |
+<a href="{% url 'blog:blog_list' %}">Блоги</a> |
+<a href="{% url 'blog:blog_feed' %}">Лента</a>
+{% if user.is_authenticated %}| <a href="{% url 'blog:blog_logout' %}">Выход</a> {% endif %}
 {% block content %}{% endblock %}
 
 </body>
