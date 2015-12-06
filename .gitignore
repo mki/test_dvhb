@@ -1,0 +1,6 @@
+*.pyc
+.idea/*
+.env/*
+static/CACHE/*
+settings_local.py
+email/*

@@ -1,0 +1,12 @@
+# Debug
+django-debug-toolbar==0.11.0
+django-extensions
+Werkzeug
+django-devserver
+sqlparse
+
+# Core
+Django==1.9
+ipython
+ipdb
+django-ses
